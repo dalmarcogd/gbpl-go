@@ -1,0 +1,37 @@
+syntax = "proto3";
+
+option optimize_for = SPEED;
+option go_package = "github.com/dalmarcogd/gbpl-go/pkg/grpcs;grpcs";
+
+package grpcs;
+
+import "google/protobuf/empty.proto";
+
+// The greeting service definition.
+service Users {
+  // Sends a greeting
+  rpc Create (UserRequest) returns (UserResponse) {}
+  rpc Update (UserRequest) returns (UserResponse) {}
+  rpc GetById (UserRequest) returns (UserResponse) {}
+  rpc Delete (UserRequest) returns (UserResponse) {}
+  rpc Get (google.protobuf.Empty) returns (UsersResponse) {}
+}
+
+// The request message containing the user's name.
+message UserRequest {
+  string id = 1;
+  string name = 2;
+  string email = 3;
+}
+
+// The response message containing the greetings
+message UserResponse {
+  string id = 1;
+  string name = 2;
+  string email = 3;
+}
+
+// The response message containing the greetings
+message UsersResponse {
+  repeated UserResponse users = 1;
+}

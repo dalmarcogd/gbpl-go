@@ -2,7 +2,7 @@ package cache
 
 import (
 	"context"
-	"github.com/dalmarcogd/bpl-go/internal/services"
+	"github.com/dalmarcogd/gbpl-go/internal/services"
 	"github.com/go-redis/redis/v8"
 )
 

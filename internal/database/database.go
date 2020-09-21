@@ -2,7 +2,7 @@ package database
 
 import (
 	"context"
-	"github.com/dalmarcogd/bpl-go/internal/services"
+	"github.com/dalmarcogd/gbpl-go/internal/services"
 	"gorm.io/driver/postgres"
 	"gorm.io/gorm"
 	"time"

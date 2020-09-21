@@ -2,8 +2,8 @@ package handlers
 
 import (
 	"context"
-	"github.com/dalmarcogd/bpl-go/internal/models"
-	"github.com/dalmarcogd/bpl-go/internal/services"
+	"github.com/dalmarcogd/gbpl-go/internal/models"
+	"github.com/dalmarcogd/gbpl-go/internal/services"
 	"github.com/google/uuid"
 )
 

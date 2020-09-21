@@ -2,13 +2,13 @@ package services
 
 import (
 	"context"
-	"github.com/dalmarcogd/bpl-go/internal/models"
+	"github.com/dalmarcogd/gbpl-go/internal/models"
 	"gorm.io/gorm"
 )
 
 type (
 	NoopDatabase    struct{}
-	NoopHttpServer  struct{}
+	NoopGrpcServer  struct{}
 	NoopCache       struct{}
 	NoopLogger      struct{}
 	NoopHandlers    struct{}
@@ -39,27 +39,27 @@ func (n *NoopDatabase) DB(_ context.Context) *gorm.DB {
 	return nil
 }
 
-func NewNoopHttpServer() *NoopHttpServer {
-	return &NoopHttpServer{}
+func NewNoopGrpcServer() *NoopGrpcServer {
+	return &NoopGrpcServer{}
 }
 
-func (n *NoopHttpServer) ServiceManager() ServiceManager {
+func (n *NoopGrpcServer) ServiceManager() ServiceManager {
 	return nil
 }
 
-func (n *NoopHttpServer) Init(_ context.Context) error {
+func (n *NoopGrpcServer) Init(_ context.Context) error {
 	return nil
 }
 
-func (n *NoopHttpServer) Close() error {
+func (n *NoopGrpcServer) Close() error {
 	return nil
 }
 
-func (n *NoopHttpServer) WithServiceManager(_ ServiceManager) HttpServer {
+func (n *NoopGrpcServer) WithServiceManager(_ ServiceManager) GrpcServer {
 	return n
 }
 
-func (n *NoopHttpServer) Run() error {
+func (n *NoopGrpcServer) Run() error {
 	return nil
 }
 

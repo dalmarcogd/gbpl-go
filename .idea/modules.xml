@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/bpl-go.iml" filepath="$PROJECT_DIR$/.idea/bpl-go.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/gbpl-go.iml" filepath="$PROJECT_DIR$/.idea/gbpl-go.iml" />
     </modules>
   </component>
 </project>

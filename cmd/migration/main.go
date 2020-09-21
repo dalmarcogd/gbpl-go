@@ -1,11 +1,11 @@
 package main
 
 import (
-	"github.com/dalmarcogd/bpl-go/internal/database"
-	"github.com/dalmarcogd/bpl-go/internal/environment"
-	"github.com/dalmarcogd/bpl-go/internal/logger"
-	"github.com/dalmarcogd/bpl-go/internal/models"
-	"github.com/dalmarcogd/bpl-go/internal/services"
+	"github.com/dalmarcogd/gbpl-go/internal/database"
+	"github.com/dalmarcogd/gbpl-go/internal/environment"
+	"github.com/dalmarcogd/gbpl-go/internal/logger"
+	"github.com/dalmarcogd/gbpl-go/internal/models"
+	"github.com/dalmarcogd/gbpl-go/internal/services"
 )
 
 func main() {

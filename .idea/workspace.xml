@@ -20,9 +20,33 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b9958622-b1d3-4d6f-93e3-29572b6d56a5" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/api/protos/Makefile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api/protos/grpcs.proto" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/bpl-go.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gbpl-go.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/internal/httpserver/handuser.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/httpserver/handuser.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Insomnia.json" beforeDir="false" afterPath="$PROJECT_DIR$/Insomnia.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmd/api/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/cmd/api/main.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmd/migration/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/cmd/migration/main.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/go.mod" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/go.sum" beforeDir="false" afterPath="$PROJECT_DIR$/go.sum" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/internal/cache/cache.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/cache/cache.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/internal/database/database.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/database/database.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/internal/environment/environment.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/environment/environment.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/internal/handlers/handlers.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/handlers/handlers.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/internal/httpserver/handuser.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/grpcserver/handuser.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/internal/httpserver/handuser_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/grpcserver/grpcserver_test.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/internal/httpserver/httpserver.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/grpcserver/grpcserver.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/internal/httpserver/httpserver_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/grpcserver/handuser_test.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/internal/httpserver/logmiddleware.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/grpcserver/logmiddleware.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/internal/httpserver/logmiddleware_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/grpcserver/logmiddleware_test.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/internal/logger/logger.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/logger/logger.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/internal/models/user.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/models/user.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/internal/services/noop.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/services/noop.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/internal/services/services.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/services/services.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,7 +87,7 @@
     <property name="go.import.settings.migrated" value="true" />
     <property name="go.tried.to.enable.integration.vgo.integrator" value="true" />
     <property name="go.vendoring.notification.had.been.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/internal/httpserver" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/api/protos" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -73,18 +97,19 @@
     <property name="restartRequiresConfirmation" value="false" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/api/protos" />
+      <recent name="$PROJECT_DIR$/internal" />
+      <recent name="$PROJECT_DIR$/internal/httpserver" />
+      <recent name="$PROJECT_DIR$" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/pkg" />
     </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/internal/httpserver" />
-      <recent name="$PROJECT_DIR$" />
-      <recent name="$PROJECT_DIR$/internal" />
-    </key>
   </component>
-  <component name="RunManager" selected="Go Build.go build github.com/dalmarcogd/bpl-go/cmd/api">
-    <configuration name="go build github.com/dalmarcogd/bpl-go/cmd/api" type="GoApplicationRunConfiguration" factoryName="Go Application" nameIsGenerated="true">
-      <module name="bpl-go" />
+  <component name="RunManager" selected="Go Build.go build github.com/dalmarcogd/gbpl-go/cmd/api">
+    <configuration name="go build github.com/dalmarcogd/gbpl-go/cmd/api" type="GoApplicationRunConfiguration" factoryName="Go Application" nameIsGenerated="true">
+      <module name="gbpl-go" />
       <working_directory value="$PROJECT_DIR$" />
       <go_parameters value="-i" />
       <EXTENSION ID="net.ashald.envfile">
@@ -99,12 +124,12 @@
       </EXTENSION>
       <kind value="PACKAGE" />
       <filePath value="$PROJECT_DIR$" />
-      <package value="github.com/dalmarcogd/bpl-go/cmd/api" />
+      <package value="github.com/dalmarcogd/gbpl-go/cmd/api" />
       <directory value="$PROJECT_DIR$" />
       <method v="2" />
     </configuration>
-    <configuration name="go build github.com/dalmarcogd/bpl-go/cmd/migration" type="GoApplicationRunConfiguration" factoryName="Go Application" nameIsGenerated="true">
-      <module name="bpl-go" />
+    <configuration name="go build github.com/dalmarcogd/gbpl-go/cmd/migration" type="GoApplicationRunConfiguration" factoryName="Go Application" nameIsGenerated="true">
+      <module name="gbpl-go" />
       <working_directory value="$PROJECT_DIR$" />
       <go_parameters value="-i" />
       <EXTENSION ID="net.ashald.envfile">
@@ -119,14 +144,26 @@
       </EXTENSION>
       <kind value="PACKAGE" />
       <filePath value="$PROJECT_DIR$" />
-      <package value="github.com/dalmarcogd/bpl-go/cmd/migration" />
+      <package value="github.com/dalmarcogd/gbpl-go/cmd/migration" />
       <directory value="$PROJECT_DIR$" />
+      <method v="2" />
+    </configuration>
+    <configuration name="protos" type="MAKEFILE_TARGET_RUN_CONFIGURATION" factoryName="Makefile" temporary="true">
+      <makefile filename="$PROJECT_DIR$/api/protos/Makefile" target="protos" workingDirectory="" arguments="">
+        <envs />
+      </makefile>
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Go Build.go build github.com/dalmarcogd/bpl-go/cmd/api" />
-      <item itemvalue="Go Build.go build github.com/dalmarcogd/bpl-go/cmd/migration" />
+      <item itemvalue="Go Build.go build github.com/dalmarcogd/gbpl-go/cmd/api" />
+      <item itemvalue="Go Build.go build github.com/dalmarcogd/gbpl-go/cmd/migration" />
+      <item itemvalue="Makefile.protos" />
     </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Makefile.protos" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -162,10 +199,14 @@
       <screen x="0" y="21" width="1920" height="1059" />
     </state>
     <state x="755" y="464" width="410" height="141" key="#GOROOT/0.21.1920.1059/0.1080.1920.1080@0.21.1920.1059" timestamp="1599589329825" />
-    <state x="418" y="189" width="1084" height="760" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1599675143623">
+    <state x="418" y="189" width="1084" height="814" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1600727229686">
       <screen x="0" y="21" width="1920" height="1059" />
     </state>
-    <state x="418" y="189" width="1084" height="760" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.21.1920.1059/0.1080.1920.1080@0.21.1920.1059" timestamp="1599675143623" />
+    <state x="418" y="189" width="1084" height="814" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.21.1920.1059/0.1080.1920.1080@0.21.1920.1059" timestamp="1600727229686" />
+    <state x="674" y="333" width="561" height="403" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1600715852576">
+      <screen x="0" y="21" width="1920" height="1059" />
+    </state>
+    <state x="674" y="333" width="561" height="403" key="#com.intellij.fileTypes.FileTypeChooser/0.21.1920.1059/0.1080.1920.1080@0.21.1920.1059" timestamp="1600715852576" />
     <state x="768" y="250" width="374" height="569" key="#com.intellij.ide.util.MemberChooser" timestamp="1599591202880">
       <screen x="0" y="21" width="1920" height="1059" />
     </state>
@@ -182,55 +223,55 @@
       <screen x="0" y="21" width="1920" height="1059" />
     </state>
     <state x="743" y="293" width="424" height="491" key="FileChooserDialogImpl/0.21.1920.1059/0.1080.1920.1080@0.21.1920.1059" timestamp="1599589326803" />
-    <state width="1874" height="327" key="GridCell.Tab.0.bottom" timestamp="1600703900059">
+    <state width="1874" height="327" key="GridCell.Tab.0.bottom" timestamp="1600727261748">
       <screen x="0" y="21" width="1920" height="1059" />
     </state>
     <state width="1874" height="327" key="GridCell.Tab.0.bottom/0.21.1920.1021/0.1080.1920.1080@0.21.1920.1021" timestamp="1599656677321" />
-    <state width="1874" height="327" key="GridCell.Tab.0.bottom/0.21.1920.1059/0.1080.1920.1080@0.21.1920.1059" timestamp="1600703900059" />
-    <state width="1874" height="327" key="GridCell.Tab.0.center" timestamp="1600703900059">
+    <state width="1874" height="327" key="GridCell.Tab.0.bottom/0.21.1920.1059/0.1080.1920.1080@0.21.1920.1059" timestamp="1600727261748" />
+    <state width="1874" height="327" key="GridCell.Tab.0.center" timestamp="1600727261748">
       <screen x="0" y="21" width="1920" height="1059" />
     </state>
     <state width="1874" height="327" key="GridCell.Tab.0.center/0.21.1920.1021/0.1080.1920.1080@0.21.1920.1021" timestamp="1599656677321" />
-    <state width="1874" height="327" key="GridCell.Tab.0.center/0.21.1920.1059/0.1080.1920.1080@0.21.1920.1059" timestamp="1600703900059" />
-    <state width="1874" height="327" key="GridCell.Tab.0.left" timestamp="1600703900059">
+    <state width="1874" height="327" key="GridCell.Tab.0.center/0.21.1920.1059/0.1080.1920.1080@0.21.1920.1059" timestamp="1600727261748" />
+    <state width="1874" height="327" key="GridCell.Tab.0.left" timestamp="1600727261748">
       <screen x="0" y="21" width="1920" height="1059" />
     </state>
     <state width="1874" height="327" key="GridCell.Tab.0.left/0.21.1920.1021/0.1080.1920.1080@0.21.1920.1021" timestamp="1599656677321" />
-    <state width="1874" height="327" key="GridCell.Tab.0.left/0.21.1920.1059/0.1080.1920.1080@0.21.1920.1059" timestamp="1600703900059" />
-    <state width="1874" height="327" key="GridCell.Tab.0.right" timestamp="1600703900059">
+    <state width="1874" height="327" key="GridCell.Tab.0.left/0.21.1920.1059/0.1080.1920.1080@0.21.1920.1059" timestamp="1600727261748" />
+    <state width="1874" height="327" key="GridCell.Tab.0.right" timestamp="1600727261748">
       <screen x="0" y="21" width="1920" height="1059" />
     </state>
     <state width="1874" height="327" key="GridCell.Tab.0.right/0.21.1920.1021/0.1080.1920.1080@0.21.1920.1021" timestamp="1599656677321" />
-    <state width="1874" height="327" key="GridCell.Tab.0.right/0.21.1920.1059/0.1080.1920.1080@0.21.1920.1059" timestamp="1600703900059" />
-    <state width="1874" height="327" key="GridCell.Tab.1.bottom" timestamp="1600703900009">
+    <state width="1874" height="327" key="GridCell.Tab.0.right/0.21.1920.1059/0.1080.1920.1080@0.21.1920.1059" timestamp="1600727261748" />
+    <state width="1874" height="327" key="GridCell.Tab.1.bottom" timestamp="1600727261692">
       <screen x="0" y="21" width="1920" height="1059" />
     </state>
     <state width="1874" height="327" key="GridCell.Tab.1.bottom/0.21.1920.1021/0.1080.1920.1080@0.21.1920.1021" timestamp="1599656671986" />
-    <state width="1874" height="327" key="GridCell.Tab.1.bottom/0.21.1920.1059/0.1080.1920.1080@0.21.1920.1059" timestamp="1600703900009" />
-    <state width="1874" height="327" key="GridCell.Tab.1.center" timestamp="1600703900009">
+    <state width="1874" height="327" key="GridCell.Tab.1.bottom/0.21.1920.1059/0.1080.1920.1080@0.21.1920.1059" timestamp="1600727261692" />
+    <state width="1874" height="327" key="GridCell.Tab.1.center" timestamp="1600727261691">
       <screen x="0" y="21" width="1920" height="1059" />
     </state>
     <state width="1874" height="327" key="GridCell.Tab.1.center/0.21.1920.1021/0.1080.1920.1080@0.21.1920.1021" timestamp="1599656671986" />
-    <state width="1874" height="327" key="GridCell.Tab.1.center/0.21.1920.1059/0.1080.1920.1080@0.21.1920.1059" timestamp="1600703900009" />
-    <state width="1874" height="327" key="GridCell.Tab.1.left" timestamp="1600703900009">
+    <state width="1874" height="327" key="GridCell.Tab.1.center/0.21.1920.1059/0.1080.1920.1080@0.21.1920.1059" timestamp="1600727261691" />
+    <state width="1874" height="327" key="GridCell.Tab.1.left" timestamp="1600727261691">
       <screen x="0" y="21" width="1920" height="1059" />
     </state>
     <state width="1874" height="327" key="GridCell.Tab.1.left/0.21.1920.1021/0.1080.1920.1080@0.21.1920.1021" timestamp="1599656671986" />
-    <state width="1874" height="327" key="GridCell.Tab.1.left/0.21.1920.1059/0.1080.1920.1080@0.21.1920.1059" timestamp="1600703900009" />
-    <state width="1874" height="327" key="GridCell.Tab.1.right" timestamp="1600703900009">
+    <state width="1874" height="327" key="GridCell.Tab.1.left/0.21.1920.1059/0.1080.1920.1080@0.21.1920.1059" timestamp="1600727261691" />
+    <state width="1874" height="327" key="GridCell.Tab.1.right" timestamp="1600727261692">
       <screen x="0" y="21" width="1920" height="1059" />
     </state>
     <state width="1874" height="327" key="GridCell.Tab.1.right/0.21.1920.1021/0.1080.1920.1080@0.21.1920.1021" timestamp="1599656671986" />
-    <state width="1874" height="327" key="GridCell.Tab.1.right/0.21.1920.1059/0.1080.1920.1080@0.21.1920.1059" timestamp="1600703900009" />
+    <state width="1874" height="327" key="GridCell.Tab.1.right/0.21.1920.1059/0.1080.1920.1080@0.21.1920.1059" timestamp="1600727261692" />
     <state x="741" y="446" width="428" height="177" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1599597198197">
       <screen x="0" y="21" width="1920" height="1059" />
     </state>
     <state x="741" y="446" width="428" height="177" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.21.1920.1059/0.1080.1920.1080@0.21.1920.1059" timestamp="1599597198197" />
-    <state x="651" y="136" width="618" height="755" key="find.popup" timestamp="1600712935888">
-      <screen x="0" y="21" width="1920" height="1021" />
+    <state x="651" y="140" width="618" height="783" key="find.popup" timestamp="1600717043836">
+      <screen x="0" y="21" width="1920" height="1059" />
     </state>
     <state x="651" y="136" width="618" height="755" key="find.popup/0.21.1920.1021/0.1080.1920.1080@0.21.1920.1021" timestamp="1600712935888" />
-    <state x="651" y="140" width="618" height="783" key="find.popup/0.21.1920.1059/0.1080.1920.1080@0.21.1920.1059" timestamp="1600448537971" />
+    <state x="651" y="140" width="618" height="783" key="find.popup/0.21.1920.1059/0.1080.1920.1080@0.21.1920.1059" timestamp="1600717043836" />
     <state x="792" y="291" width="325" height="487" key="refactoring.ChangeSignatureDialog" timestamp="1599597833021">
       <screen x="0" y="21" width="1920" height="1059" />
     </state>
@@ -243,11 +284,6 @@
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
-        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
-          <url>file://$PROJECT_DIR$/cmd/api/main.go</url>
-          <line>42</line>
-          <option name="timeStamp" value="4" />
-        </line-breakpoint>
         <line-breakpoint enabled="true" type="DlvLineBreakpoint">
           <url>file:///usr/local/go/src/net/http/server.go</url>
           <line>2940</line>

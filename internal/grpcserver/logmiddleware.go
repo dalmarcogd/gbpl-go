@@ -1,8 +1,8 @@
-package httpserver
+package grpcserver
 
 import (
 	"fmt"
-	"github.com/dalmarcogd/bpl-go/internal/services"
+	"github.com/dalmarcogd/gbpl-go/internal/services"
 	"github.com/labstack/echo/v4"
 	"net/http"
 )

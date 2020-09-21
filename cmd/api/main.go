@@ -2,13 +2,13 @@ package main
 
 import (
 	"fmt"
-	"github.com/dalmarcogd/bpl-go/internal/cache"
-	"github.com/dalmarcogd/bpl-go/internal/database"
-	"github.com/dalmarcogd/bpl-go/internal/environment"
-	"github.com/dalmarcogd/bpl-go/internal/handlers"
-	"github.com/dalmarcogd/bpl-go/internal/httpserver"
-	"github.com/dalmarcogd/bpl-go/internal/logger"
-	"github.com/dalmarcogd/bpl-go/internal/services"
+	"github.com/dalmarcogd/gbpl-go/internal/cache"
+	"github.com/dalmarcogd/gbpl-go/internal/database"
+	"github.com/dalmarcogd/gbpl-go/internal/environment"
+	"github.com/dalmarcogd/gbpl-go/internal/grpcserver"
+	"github.com/dalmarcogd/gbpl-go/internal/handlers"
+	"github.com/dalmarcogd/gbpl-go/internal/logger"
+	"github.com/dalmarcogd/gbpl-go/internal/services"
 	"os"
 	"os/signal"
 )
@@ -19,7 +19,7 @@ func main() {
 		WithDatabase(database.New()).
 		WithCache(cache.New()).
 		WithLogger(logger.New()).
-		WithHttpServer(httpserver.New().WithAddress(":8080")).
+		WithGrpcServer(grpcserver.New().WithAddress(":8080")).
 		WithHandlers(handlers.New()).
 		WithEnvironment(environment.New())
 
@@ -29,8 +29,8 @@ func main() {
 	}
 
 	go func() {
-		ss.Logger().Info(ss.Context(), "Http server started")
-		if err := ss.HttpServer().Run(); err != nil {
+		ss.Logger().Info(ss.Context(), "Grpc server started")
+		if err := ss.GrpcServer().Run(); err != nil {
 			ss.Logger().Fatal(ss.Context(), err.Error())
 			return
 		}

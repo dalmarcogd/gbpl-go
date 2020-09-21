@@ -3,7 +3,7 @@ package services
 import (
 	"context"
 	"fmt"
-	"github.com/dalmarcogd/bpl-go/internal/models"
+	"github.com/dalmarcogd/gbpl-go/internal/models"
 	"gorm.io/gorm"
 )
 
@@ -31,9 +31,9 @@ type (
 		Error(ctx context.Context, message string, fields ...map[string]interface{})
 		Fatal(ctx context.Context, message string, fields ...map[string]interface{})
 	}
-	HttpServer interface {
+	GrpcServer interface {
 		Generic
-		WithServiceManager(c ServiceManager) HttpServer
+		WithServiceManager(c ServiceManager) GrpcServer
 		Run() error
 	}
 	Environment interface {
@@ -63,8 +63,8 @@ type (
 		Cache() Cache
 		WithLogger(d Logger) ServiceManager
 		Logger() Logger
-		WithHttpServer(d HttpServer) ServiceManager
-		HttpServer() HttpServer
+		WithGrpcServer(d GrpcServer) ServiceManager
+		GrpcServer() GrpcServer
 		WithHandlers(d Handlers) ServiceManager
 		Handlers() Handlers
 		WithEnvironment(d Environment) ServiceManager
@@ -81,7 +81,7 @@ type (
 		database    Database
 		cache       Cache
 		log         Logger
-		httpServer  HttpServer
+		grpcServer  GrpcServer
 		handlers    Handlers
 		environment Environment
 	}
@@ -92,7 +92,7 @@ func New() *ServiceManagerImpl {
 		database:    NewNoopDatabase(),
 		cache:       NewNoopCache(),
 		log:         NewNoopLogger(),
-		httpServer:  NewNoopHttpServer(),
+		grpcServer:  NewNoopGrpcServer(),
 		handlers:    NewNoopHandlers(),
 		environment: NewNoopEnvironment(),
 	}
@@ -106,7 +106,7 @@ func (s *ServiceManagerImpl) Init() error {
 	if err := s.Environment().Init(s.ctx); err != nil {
 		return err
 	}
-	if err := s.HttpServer().Init(s.ctx); err != nil {
+	if err := s.GrpcServer().Init(s.ctx); err != nil {
 		return err
 	}
 	if err := s.Cache().Init(s.ctx); err != nil {
@@ -127,7 +127,7 @@ func (s *ServiceManagerImpl) Close() error {
 	if errC := s.database.Close(); errC != nil {
 		err = fmt.Errorf("%v - %v", err, errC)
 	}
-	if errC := s.httpServer.Close(); errC != nil {
+	if errC := s.grpcServer.Close(); errC != nil {
 		err = fmt.Errorf("%v - %v", err, errC)
 	}
 	if errC := s.log.Close(); errC != nil {
@@ -168,13 +168,13 @@ func (s *ServiceManagerImpl) Logger() Logger {
 	return s.log
 }
 
-func (s *ServiceManagerImpl) WithHttpServer(d HttpServer) ServiceManager {
-	s.httpServer = d.WithServiceManager(s)
+func (s *ServiceManagerImpl) WithGrpcServer(d GrpcServer) ServiceManager {
+	s.grpcServer = d.WithServiceManager(s)
 	return s
 }
 
-func (s *ServiceManagerImpl) HttpServer() HttpServer {
-	return s.httpServer
+func (s *ServiceManagerImpl) GrpcServer() GrpcServer {
+	return s.grpcServer
 }
 
 func (s *ServiceManagerImpl) WithHandlers(d Handlers) ServiceManager {

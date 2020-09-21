@@ -4,7 +4,7 @@ import (
 	"context"
 
 	"github.com/crgimenes/goconfig"
-	"github.com/dalmarcogd/bpl-go/internal/services"
+	"github.com/dalmarcogd/gbpl-go/internal/services"
 )
 
 //Environment this object keep the all variables environment
