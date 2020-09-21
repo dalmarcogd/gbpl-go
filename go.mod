@@ -15,7 +15,6 @@ require (
 	golang.org/x/xerrors v0.0.0-20200804184101-5ec99f83aff1 // indirect
 	google.golang.org/genproto v0.0.0-20200921165018-b9da36f5f452 // indirect
 	google.golang.org/grpc v1.32.0
-	google.golang.org/grpc/cmd/protoc-gen-go-grpc v0.0.0-20200917190803-0f7e218c2cf4 // indirect
 	google.golang.org/protobuf v1.25.0
 	gorm.io/driver/postgres v1.0.0
 	gorm.io/gorm v1.20.0
