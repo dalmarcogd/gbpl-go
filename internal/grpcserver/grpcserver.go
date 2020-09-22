@@ -4,8 +4,10 @@ import (
 	"context"
 	"github.com/dalmarcogd/gbpl-go/internal/services"
 	"github.com/dalmarcogd/gbpl-go/pkg/grpcs"
-	grpc_ctxtags "github.com/grpc-ecosystem/go-grpc-middleware/tags"
+	"github.com/grpc-ecosystem/go-grpc-middleware/tags"
 	"google.golang.org/grpc"
+	"google.golang.org/grpc/health"
+	"google.golang.org/grpc/health/grpc_health_v1"
 	"google.golang.org/grpc/reflection"
 	"net"
 )
@@ -64,6 +66,7 @@ func (s *ServiceImpl) RegisterServices() *ServiceImpl {
 		Get:     s.GetUsers,
 		Delete:  s.DeleteUser,
 	})
+	grpc_health_v1.RegisterHealthServer(s.grpcServer, health.NewServer())
 	return s
 }
 
