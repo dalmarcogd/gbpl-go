@@ -19,7 +19,7 @@ func main() {
 		WithDatabase(database.New()).
 		WithCache(cache.New()).
 		WithLogger(logger.New()).
-		WithGrpcServer(grpcserver.New().WithAddress(":8080")).
+		WithGrpcServer(grpcserver.New().WithAddress("localhost:8080")).
 		WithHandlers(handlers.New()).
 		WithEnvironment(environment.New())
 
@@ -29,7 +29,7 @@ func main() {
 	}
 
 	go func() {
-		ss.Logger().Info(ss.Context(), "Grpc server started")
+		ss.Logger().Info(ss.Context(), fmt.Sprintf("Grpc server started at %v", ss.GrpcServer().Address()))
 		if err := ss.GrpcServer().Run(); err != nil {
 			ss.Logger().Fatal(ss.Context(), err.Error())
 			return

@@ -4,7 +4,9 @@ import (
 	"context"
 	"github.com/dalmarcogd/gbpl-go/internal/services"
 	"github.com/dalmarcogd/gbpl-go/pkg/grpcs"
+	grpc_ctxtags "github.com/grpc-ecosystem/go-grpc-middleware/tags"
 	"google.golang.org/grpc"
+	"google.golang.org/grpc/reflection"
 	"net"
 )
 
@@ -26,9 +28,16 @@ func (s *ServiceImpl) WithAddress(address string) *ServiceImpl {
 	return s
 }
 
+func (s *ServiceImpl) Address() string {
+	return s.address
+}
+
 func (s *ServiceImpl) Init(ctx context.Context) error {
 	s.ctx = ctx
-	s.grpcServer = grpc.NewServer()
+	s.grpcServer = grpc.NewServer(
+		grpc.ChainUnaryInterceptor(
+			grpc_ctxtags.UnaryServerInterceptor(),
+			LogUnaryServerInterceptor(s.ServiceManager())))
 	s.RegisterServices()
 	return nil
 }
@@ -59,6 +68,7 @@ func (s *ServiceImpl) RegisterServices() *ServiceImpl {
 }
 
 func (s *ServiceImpl) Run() error {
+	reflection.Register(s.grpcServer)
 	listen, err := net.Listen("tcp", s.address)
 	if err != nil {
 		return err

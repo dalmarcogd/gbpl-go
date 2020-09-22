@@ -34,6 +34,7 @@ type (
 	GrpcServer interface {
 		Generic
 		WithServiceManager(c ServiceManager) GrpcServer
+		Address() string
 		Run() error
 	}
 	Environment interface {

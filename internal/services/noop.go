@@ -63,6 +63,10 @@ func (n *NoopGrpcServer) Run() error {
 	return nil
 }
 
+func (n *NoopGrpcServer) Address() string {
+	return ""
+}
+
 func NewNoopCache() *NoopCache {
 	return &NoopCache{}
 }
